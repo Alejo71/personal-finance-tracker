@@ -36,6 +36,15 @@ docker compose up --build
 
 La API queda en <http://localhost:8000>. Para usar el frontend con Docker, ejecútalo localmente con los comandos anteriores; así es más fácil para un proyecto de clase.
 
+Si ya habías ejecutado una versión anterior y PostgreSQL muestra `role "postgres" does not exist`, el volumen conserva usuarios y contraseñas viejos. Para un proyecto nuevo, sin datos que conservar:
+
+```bash
+docker compose down -v
+docker compose up --build
+```
+
+El `-v` borra solamente el volumen de esta aplicación. Si necesitas conservar esos datos, no lo ejecutes: debes usar en `.env` el mismo usuario y contraseña con los que se creó originalmente ese volumen, o hacer una migración de PostgreSQL.
+
 ## Variables útiles
 
 - `JWT_SECRET`: cambia la llave usada para firmar las sesiones.
