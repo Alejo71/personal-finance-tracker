@@ -1,0 +1,26 @@
+[project]
+name = "personal-finance-tracker"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+authors = [
+    { name = "alejo", email = "alramirezn@unal.edu.co" }
+]
+requires-python = ">=3.12"
+dependencies = [
+    "fastapi[standard]==0.141.1",
+    "PyJWT==2.10.1",
+    "pwdlib[argon2]==0.3.0",
+    "psycopg[binary]==3.2.10",
+    "pydantic>=2.11.0",
+    "python-dotenv==1.0.1",
+    "sqlmodel==0.0.42",
+    "uvicorn[standard]==0.52.4",
+]
+
+[project.scripts]
+personal-finance-tracker = "personal_finance_tracker:main"
+
+[build-system]
+requires = ["uv_build>=0.13.6,<0.14.0"]
+build-backend = "uv_build"

@@ -1,0 +1,46 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap");
+
+:root { color: #17211d; background: #f5f7f4; font-family: "DM Sans", sans-serif; }
+* { box-sizing: border-box; }
+body { margin: 0; }
+button, input, select { font: inherit; }
+button { cursor: pointer; border: 0; }
+.auth-page { min-height: 100vh; display: grid; place-items: center; padding: 24px; background: #edf3ee; }
+.auth-card { width: min(430px, 100%); background: white; padding: 42px; border-radius: 24px; box-shadow: 0 20px 60px #193c2918; }
+.brand-mark { width: 48px; height: 48px; display: grid; place-items: center; background: #b7e5c4; border-radius: 14px; font-size: 28px; color: #1b6338; }
+.eyebrow { color: #55725f; font-size: 12px; font-weight: 700; letter-spacing: 1.8px; margin: 0 0 10px; }
+h1, h2, h3 { font-family: "Space Grotesk", sans-serif; margin: 0; }
+h1 { font-size: 34px; margin-top: 20px; }
+.muted, small { color: #718078; }
+label { display: grid; gap: 7px; color: #53645a; font-size: 14px; font-weight: 600; }
+form { display: grid; gap: 16px; margin-top: 28px; }
+input, select { width: 100%; padding: 12px 13px; border: 1px solid #dce5de; border-radius: 9px; background: #fbfcfb; color: #17211d; outline: none; }
+input:focus, select:focus { border-color: #4aa36a; }
+form button, .add-wallet button { background: #267343; color: white; border-radius: 9px; padding: 13px; font-weight: 700; }
+.link-button { background: transparent; color: #267343; margin: 22px auto 0; display: block; font-size: 14px; }
+.error { color: #b54646; font-size: 14px; }
+.app-shell { max-width: 1080px; margin: auto; padding: 42px 24px 70px; }
+.topbar { display: flex; justify-content: space-between; align-items: end; margin-bottom: 34px; }
+.topbar h2 { font-size: 29px; }
+.logout { background: transparent; color: #55725f; padding: 10px; }
+.summary-grid, .content-grid { display: grid; grid-template-columns: 1.4fr 1fr 1fr; gap: 16px; }
+.summary-card, .panel { background: white; border: 1px solid #e6ece7; border-radius: 16px; padding: 23px; box-shadow: 0 7px 25px #193c2908; }
+.summary-card { display: grid; gap: 8px; }
+.summary-card span, .summary-card small { font-size: 13px; }
+.summary-card strong { font: 700 25px "Space Grotesk"; }
+.summary-card.main { background: #1c5535; color: white; border: 0; }
+.summary-card.main small { color: #b5d6bf; }
+.green { color: #328452; }.red { color: #c25c58; }
+.content-grid { grid-template-columns: 1.2fr 1fr; margin-top: 16px; }
+.panel-title { display: flex; justify-content: space-between; align-items: center; margin-bottom: 18px; }
+.panel-title h3 { font-size: 18px; }
+.panel-title span { color: #328452; font-size: 23px; }
+.movement-form { grid-template-columns: 1fr 1fr; margin-top: 0; }
+.movement-form button { grid-column: 1 / -1; }
+.wallet, .transaction { display: flex; align-items: center; gap: 12px; padding: 13px 0; border-top: 1px solid #eef2ef; }
+.wallet > strong, .transaction > strong { margin-left: auto; }
+.wallet small, .transaction small { display: block; margin-top: 3px; font-size: 12px; }
+.wallet-icon { background: #e4f2e7; color: #328452; padding: 9px; border-radius: 9px; }
+.add-wallet { display: flex; gap: 8px; margin-top: 12px; }.add-wallet button { padding: 10px 14px; }
+.history { margin-top: 16px; }.dot { width: 10px; height: 10px; border-radius: 50%; }.green-bg { background: #4ca66d; }.red-bg { background: #d26c67; }
+@media (max-width: 700px) { .summary-grid, .content-grid { grid-template-columns: 1fr; }.topbar { align-items: start; }.topbar h2 { font-size: 23px; }.auth-card { padding: 30px 24px; } }
