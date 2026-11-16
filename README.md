@@ -27,6 +27,17 @@ npm run dev
 
 Abre <http://localhost:5173>. Puedes crear una cuenta y comenzar a agregar una billetera, categorías y movimientos.
 
+## Un solo comando
+
+Con Docker iniciado:
+
+```bash
+chmod +x run.sh
+./run.sh
+```
+
+El script crea `.env` si todavía no existe y levanta PostgreSQL, la API y React dentro de Docker. No necesitas tener `npm` instalado localmente.
+
 ## Con Docker
 
 ```bash
@@ -34,7 +45,7 @@ cp .env.example .env
 docker compose up --build
 ```
 
-La API queda en <http://localhost:8000>. Para usar el frontend con Docker, ejecútalo localmente con los comandos anteriores; así es más fácil para un proyecto de clase.
+La API queda en <http://localhost:8000> y la interfaz en <http://localhost:5173>.
 
 Si ya habías ejecutado una versión anterior y PostgreSQL muestra `role "postgres" does not exist`, el volumen conserva usuarios y contraseñas viejos. Para un proyecto nuevo, sin datos que conservar:
 
